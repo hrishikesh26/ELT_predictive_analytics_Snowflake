@@ -134,4 +134,15 @@ The DAG visualizes the automated data pipeline, detailing task dependencies and 
 This interactive dashboard showcases real-time predictive analytics. Users can adjust gauge parameters to simulate various marketing scenarios, with live model inference generating revenue predictions, facilitating dynamic decision-making.
 <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExcHNna2pmdTkycDlvZGsyemxkY2h0cmY5cXdyZzRrczI0YjhqcGxmNyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/J7ueUrqYBUkyi6C4Xm/giphy.gif" alt="Giphy Image" width="600" />
 
+## Results
+
+- **Data Ingestion:** Successfully loaded raw data from AWS S3 into Snowflake tables (CAMPAIGN_SPEND, MONTHLY_REVENUE, etc.) with measurable ingestion durations, ensuring a consistent and reliable data load process.
+
+- **Data Transformation:** ELT operations executed via Snowpark for Python efficiently aggregated and transformed raw data into analytical views (e.g., SPEND_PER_MONTH) with transformation times that meet production-grade performance expectations.
+
+- **Pipeline Execution:** The DAG orchestrated through Snowflake Tasks achieved a high success rate. Task execution metrics (start times, end times, and durations) can be monitored in Snowsight, verifying the robustness of the automated pipeline.
+
+- **Machine Learning:** The predictive model demonstrated strong performance, with R² scores of approximately 0.99 on training data and 0.96 on testing data. Real-time inference through the integrated Streamlit dashboard shows minimal latency, confirming the viability of the ML workflow in production.
+
+- **Operational Efficiency:** Query performance and resource utilization are continuously tracked using Snowflake’s ACCOUNT_USAGE views, ensuring that both compute resources and costs are optimized.
 
